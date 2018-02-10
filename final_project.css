@@ -1,0 +1,410 @@
+/*
+Author: Charles (C.J.) Jenkins
+Description: Hearthstone Deckbuilder Theme
+Due Date: 08-31-14
+Acknowledgements: Google Fonts API, Blizzard
+*/
+
+/*Fonts - Courtesy of Google Fonts API
+---------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+
+@font-face {
+    font-family: "hearthFont";
+    src: url("fonts/bliz-quadrata.woff") format('woff');
+}
+
+/*Body 
+---------------------------------------------------------*/
+body {
+	font-family: 'Gudea', Arial, Helvetica, sans-serif;
+	background-color: #222;
+	background-image: url('images/background_fade.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	font-weight: normal;
+	color: #d4d4d4;
+	line-height: 1;
+	margin: 0;
+	padding-left: 25px;
+	font-size: 16pt;
+}
+
+.status {
+	color: #c4f4d4;
+}
+
+/*Content Blocks
+---------------------------------------------------------*/
+#content {
+  background-color:rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 1000px;
+  height: 100%;
+}
+
+#contentLogin {
+  background-color:rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 1000px;
+  height: 100vh;
+}
+
+.outerTd {
+	width: 150px;
+}
+
+#deckData {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+#manaChart {
+	position: relative;
+}
+
+#reloadMana {
+	position: relative;
+	width: 480px;
+	height: 300px;
+	text-align: center;
+}
+
+#cardsInDeck {
+	height: 400px;
+	overflow-y: scroll;
+	background-color: rgba(60, 60, 60, 0.2);
+}
+
+#allClassDiv {
+	height: 400px;
+	overflow-y: scroll;
+	background-color: rgba(60, 60, 60, 0.2);
+}
+
+#renameLink {
+	height: 100px;
+}
+
+#renameLink input[type="text"]{
+	width: 200px;
+	text-align: center;
+}
+
+#status1, #status2 {
+	margin-top: 10px;
+	margin-bottom: -31px;
+}
+
+/*Headings
+---------------------------------------------------------*/
+h1 {
+	font-family: hearthFont, sans-serif;
+	font-size: 80px;
+	color: #FFBD40;
+}
+
+h2 {
+	font-family: hearthFont, sans-serif;
+	font-size: 24px;
+	color: #d4d4d4;
+}
+
+h3 {
+	font-family: hearthFont, sans-serif;
+	font-size: 16pt;
+	color: #d4d4d4;
+	text-align: center;
+	xdisplay: inline-block;
+}
+
+.leftHeading {
+	text-align: left;
+	xpadding-left: 40px;
+}
+
+/*Lists
+---------------------------------------------------------*/
+li {
+	list-style: none;
+	width: 150px;
+}
+
+li:hover {
+	background-color: #748b71;
+	color: #fff;
+}
+
+/*Tables
+---------------------------------------------------------*/
+.innerTable {
+	border-collapse: collapse;
+	width: 150px;
+}
+
+table, th, td {
+	border-style: none;
+	padding: 5px;
+	width: 1000px;
+	vertical-align: middle;
+}
+
+th {
+	font-family: hearthFont, sans-serif;
+}
+
+.emptyCell {
+	background-color: #4D8138;
+}
+
+.browseRow {
+	font-size: 12pt;
+	text-align: left;
+}
+
+.nameCell {
+	width: 186px;
+	overflow: hidden;
+}
+
+.nameCell img {
+	vertical-align: middle;
+}
+
+.typeCell {
+	width: 50px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.factionCell {
+	width: 280px;
+	overflow: hidden;
+}
+
+.rarityCell {
+	width: 280px;
+	overflow: hidden;
+}
+
+.costCell {
+	width: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.attackCell {
+	width: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.healthCell {
+	width: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.durabilityCell {
+	width: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.textCell {
+	width: 280px;
+	overflow: hidden;
+}
+
+.countCell {
+	width: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.classCell {
+	width: 80px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.common {
+	color: #fff;
+}
+
+.rare {
+	color: #4671D5;
+}
+
+.epic {
+	color: #9A3FD5;
+}
+
+.legendary {
+	color: #FF9540;
+}
+
+#allCardTable {
+	table-layout: fixed;
+}
+
+#allCardDiv {
+	height: 400px;
+	overflow-y: scroll;
+	background-color: rgba(60, 60, 60, 0.2);
+}
+
+#allCardTable td {
+	height: 40px;
+}
+
+#allCardTable tr:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+#allClassTable {
+	width: 200px;
+	table-layout: fixed;
+}
+
+#allClassDiv {
+	height: 400px;
+	overflow-y: scroll;
+	background-color: rgba(60, 60, 60, 0.2);
+}
+
+#allClassTable td {
+	height: 40px;
+}
+
+#allClassTable tr:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+#availableCardTable {
+	table-layout: fixed;
+}
+
+#availableCardDiv {
+	height: 400px;
+	overflow-y: scroll;
+	background-color: rgba(60, 60, 60, 0.2);
+}
+
+#availableCardTable td {
+	height: 40px;
+}
+
+#availableCardTable tr:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+	cursor: pointer;
+}
+
+#deckCardTable {
+	table-layout: fixed;
+	width: 500px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+#deckCardTable td {
+	height: 40px;
+}
+
+#deckCardTable tr:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+	cursor: pointer;
+}
+
+/*Links
+---------------------------------------------------------*/
+a:link {
+	color: #80aB86;
+}
+
+a:hover {
+	color: #b6a4a4;
+}
+
+a:visited {
+	color: #80aB86;
+}
+
+.innerTable td img:hover { 
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc; 
+
+}
+
+/*Forms
+---------------------------------------------------------*/
+#createAccountForm{
+	margin-top: 50px;
+}
+
+.menuBtn {
+	display: inline-block;
+}
+
+label.error {
+	margin-left: 20px;
+	width: auto;
+	display: inline;
+}
+
+input {
+	background-color: #444;
+	border: #FFF;
+	color: #FFF;
+}
+
+input[type="text"], input[type="password"] {
+	width: 250px;
+	text-align: left;
+	font-size: 16pt;
+}
+
+input[type="submit"] {
+	font-family: hearthFont, sans-serif;
+	background-color: #444;
+	color: #FFF;
+	border-style: none;
+	font-size: 16pt;
+}
+
+input[type="submit"]:hover {
+	background-color: #333;
+}
+
+select {
+	background-color: #444;
+	color: #FFF;
+	border-style: none;
+}
+
+label > input{
+  display:none;
+}
+label > input + img{
+  cursor:pointer;
+  background-color: rgba(200, 200, 200, 0.0);
+}
+label > input + img:hover{
+  background-color: rgba(200, 200, 200, 0.1);
+}
+label > input:checked + img{
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+#nameAndSubmit {
+	display: none;
+}
+/*END
+---------------------------------------------------------*/
